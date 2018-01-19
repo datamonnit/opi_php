@@ -9,8 +9,7 @@
 </style>
 <?php
 $pregexes = array(
-	'/^(\pL{1})([\pL\pN]{0,6})#([\pL\pN]{1,6})$/u', // \pL = Unicode-kirjain \pN = unicode-numero
-	'/^(\pL{1})(\p{LN}{0,})#(\pL{1,})$/u',
+	'/^(\pL{1})([\pL\pN]{0,})#([\pL\pN]{1,})$/u', // \pL = Unicode-kirjain \pN = unicode-numero
 	'/^(foo)(#)(bar)$/',
 	'/^([p{L}A-Za-z]{1})([A-Za-z0-9]{1,12})(#)([A-Za-z1-9]{1,})$/'
 );
