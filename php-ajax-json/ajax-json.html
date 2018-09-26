@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+<body>
+    <button onclick="getJSON()">Get Data</button>
+    <div id="data"></div>
+    
+
+
+<script>
+    function getJSON() {    
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                showData(obj);
+            }
+        };
+        xmlhttp.open("GET", "data.json", true);
+        xmlhttp.send();
+    }
+
+    function showData(json){
+        var html = "";
+        console.log(json);
+        for (var i=0; i<json.employees.length; i++) {
+            html += json.employees[i].firstName + " " + json.employees[i].lastName + "<br>";
+        }
+        document.querySelector('#data').innerHTML = html;
+    }
+    </script>
+</body>
+</html>

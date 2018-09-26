@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+<body>
+    <button onclick="getMenu()">Get Menu</button>
+    <div id="menu"></div>
+    
+
+
+<script>
+    function getMenu() {    
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var xmlData = this.responseXML;
+                showMenu(xmlData);
+            }
+        };
+        xmlhttp.open("GET", "data.xml", true);
+        xmlhttp.send();
+    }
+
+    function showMenu(xml){
+        foods = xml.getElementsByTagName("food");
+        let html = "";
+        for (var i=0; i<foods.length; i++) {
+            console.log(foods[i].childNodes[1].childNodes[0].nodeValue);
+            html += foods[i].childNodes[1].childNodes[0].nodeValue + "<br>";
+        }
+        document.querySelector('#menu').innerHTML = html;
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax-ostoslista</title>
+</head>
+<body>
+    <h1>Ostoslista</h1>
+    <button onclick="getData()">Hae</button>
+    <input type="text" id="tuote">
+    <input type="number" id="maara">
+    <button>Lisaa</button>
+    
+    <div id="tuotteet"></div>
+    
+
+
+<script>
+     function getData() {    
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                console.log(obj);
+            }
+        };
+        xmlhttp.open("GET", "getData.php", true);
+        xmlhttp.send();
+    }
+</script>
+</body>
+</html>

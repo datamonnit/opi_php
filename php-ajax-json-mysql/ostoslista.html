@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ostoslista</title>
+</head>
+<body>
+<h1>Ostoslista</h1><button onclick="getData()">Hae</button>
+    <ul id="lista"></ul>
+    <label for="tuote">Tuote:</label><br>
+    <input type="text" name="tuote" id="tuote" placeholder="tuotteen nimi"><br>
+    <label for="maara"></label><br>
+    <input type="number" name="maara" id="maara"><br>
+    <button onclick="insertData()">Lisää</button>
+
+    <script>
+    function getData(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                console.log(obj);
+                showList(obj);
+            }
+        };
+        xhttp.open("GET", "getData.php", true);
+        xhttp.send();
+    } 
+
+    function showList(o){
+        var html = "";
+        for (var i=0; i<o.length; i++) {
+            html += "<li>" + o[i].tuote + " " + o[i].maara + " <a onclick=\"removeData(" + o[i].id + ")\">Poista</a> <a onclick=\"addAmount(" + o[i].id + ")\">Lisää</a></li>";
+        }
+        document.querySelector('#lista').innerHTML = html;
+    }
+
+    function addAmount(id){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                console.log(obj);
+                getData();
+            }
+        };
+        xhttp.open("GET", "addAmount.php?id="+id, true);
+        xhttp.send();
+    }
+
+    function removeData(id){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                console.log(obj);
+                getData();
+            }
+        };
+        xhttp.open("GET", "removeData.php?id="+id, true);
+        xhttp.send();
+    }
+
+    function insertData(){
+        var tuote = document.querySelector('#tuote').value;
+        var maara = document.querySelector('#maara').value;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonText = this.responseText;
+                var obj = JSON.parse(jsonText);
+                console.log(obj);
+                getData();
+            }
+        };
+        xhttp.open("POST", "insertData.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("tuote="+tuote+"&maara="+maara+"");
+    }
+
+    </script>
+
+</body>
+</html>
