@@ -4,3 +4,4 @@ Nimi:  Markus ;Ikä: 10
 Nimi:  Jesper ;Ikä: 12
 Nimi:  Miklas ;Ikä: 9
 Nimi:  Emma ;Ikä: 7
+Nimi:  jaakko ;Ikä: 10
