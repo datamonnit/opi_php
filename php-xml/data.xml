@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<data>
+  <rivi>
+    <nimi>Tuomas</nimi>
+    <puhelin>044 123123</puhelin>
+    <osoite>
+      <katu>Raviradantie</katu>
+      <postinumero>50100</postinumero>
+      <kaupunki>Mikkeli</kaupunki>
+    </osoite>
+  </rivi>
+  <rivi>
+    <nimi>Markus</nimi>
+    <puhelin>044 33333</puhelin>
+    <osoite>
+      <katu>Mikonkatu</katu>
+      <postinumero>50100</postinumero>
+      <kaupunki>Mikkeli</kaupunki>
+    </osoite>
+  </rivi>
+  <rivi>
+    <nimi>Kalle</nimi>
+    <puhelin>11111</puhelin>
+    <osoite>
+      <katu>Keskuskatu</katu>
+      <postinumero>50100</postinumero>
+      <kaupunki>Mikkeli</kaupunki>
+    </osoite>
+  </rivi>
+  <rivi>
+    <nimi>Roni</nimi>
+    <puhelin>1231233</puhelin>
+    <osoite>
+      <katu>Jokikatu 23</katu>
+      <postinumero>40102</postinumero>
+      <kaupunki>Vantaa</kaupunki>
+    </osoite>
+  </rivi>
+  <rivi>
+    <nimi>Kauno</nimi>
+    <puhelin>663623</puhelin>
+    <osoite>
+      <katu>Mik&#xE4;katu</katu>
+      <postinumero>123123</postinumero>
+      <kaupunki>Kaukola</kaupunki>
+    </osoite>
+  </rivi>
+</data>
