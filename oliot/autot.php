@@ -24,6 +24,8 @@ $ford->setVari('musta');
 $ford->hinta = 12000;
 
 foreach ($autot as $auto) {
+    echo "<p>";
     echo $auto->autonTiedot();
-    echo "$auto->tarjousHinta(20);
+    echo $auto->tarjousHinta(20);
+    echo "</p>";
 }

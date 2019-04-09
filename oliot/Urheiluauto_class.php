@@ -17,8 +17,8 @@ class Urheiluauto extends Auto {
 
     public function autonTiedot()
     {
-        $html = "Auton merkki on " . $this->merkki . " ja se on " . $this->vari ."!";
-        $html .= "ja huippunopeus " . $this->huippunopeus . "";
+        $html = "Auton merkki on " . $this->merkki . " ja se on " . $this->vari ."! ";
+        $html .= "Huippunopeus on " . $this->huippunopeus . ". ";
         return $html;
     }
 

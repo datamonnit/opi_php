@@ -21,14 +21,15 @@ class Auto {
 
     public function autonTiedot()
     {
-        $html = "<p>Auton merkki on " . $this->merkki . " ja se on " . $this->vari ."!</p>";
+        $html = "Auton merkki on " . $this->merkki . " ja se on " . $this->vari . ". ";
         return $html;
     }
 
     public function tarjousHinta($alennus_pros)
     {
         $uusi_hinta = $this->hinta - ($this->hinta * $alennus_pros / 100);
-        return $uusi_hinta;
+        $html = "Auton tarjoushinta on " . $uusi_hinta . ". ";
+        return $html;
     }
 
 }
