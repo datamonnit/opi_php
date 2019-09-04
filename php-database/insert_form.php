@@ -15,6 +15,9 @@
         <label for="nimi">Salasana</label>
         <input type="text" name="salasana" placeholder="salasana">
         <br>
+        <label for="nimi">Salasana uudelleen</label>
+        <input type="text" name="salasana2" placeholder="salasana uudelleen">
+        <br>
         <label for="nimi">Email</label>
         <input type="text" name="email" placeholder="email">
         <br>

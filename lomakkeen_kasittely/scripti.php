@@ -20,6 +20,9 @@ $data = "$nimi;$email;$puhelin" . PHP_EOL;
 include_once("funktiot.php");
 
 tallennaRivi("ilmoittautumiset.txt", $data);
+?>
+<a href="lomake.php">Ilmoittautumislomakkeelle</a>
+
 
 
 

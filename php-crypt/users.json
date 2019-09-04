@@ -1,0 +1,14 @@
+[
+    {
+        "username": "keuno",
+        "plaintext": "qwerty",
+        "password": "$2a$07$anexamplestringforsaledQHX9v1LYvC5yp66Vn7lnf1qyd8zi7S",
+        "algorithm": "crypt-blowfish"
+    },
+    {
+        "username": "jukka",
+        "plaintext": "qwerty",
+        "password": "$1$somethig$tayOUWXZeP\/YVNIJCJdRS.",
+        "algorithm": "crypt-md5"
+    }
+]

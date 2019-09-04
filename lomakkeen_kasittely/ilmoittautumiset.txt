@@ -1,2 +1,5 @@
 Kasler;kasler@mail.com;837312
 Tuomas;tuomas.puro@esedu.fi;hpe
+Tuomas;visitor@esedu.fi;sdfsdf
+Janipetteri;jani@esedu.fi;044-123123
+Janipetteri;jani@esedu.fi;044-123123
