@@ -10,5 +10,17 @@
         "plaintext": "qwerty",
         "password": "$1$somethig$tayOUWXZeP\/YVNIJCJdRS.",
         "algorithm": "crypt-md5"
+    },
+    {
+        "username": "niko",
+        "plaintext": "kissa",
+        "password": "$2a$07$anexamplestringforsale7uFhOPrCs91q6dSmKGNLcrHdPeOrXI.",
+        "algorithm": "crypt-blowfish"
+    },
+    {
+        "username": "tuomas",
+        "plaintext": "koira",
+        "password": "$2a$07$anexamplestringforsaledm1CYCoFe22F9wf13dUcsPX8tSZO0fm",
+        "algorithm": "crypt-blowfish"
     }
 ]

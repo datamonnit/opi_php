@@ -1,21 +1,23 @@
 <?php
+// How to delete a file in a sibling directory
+// 
+// .
+// └── folder
+//     ├── app_folder
+//     │   └── this-file.php
+//     └── data_folder
+//         └── file-to-delete.txt
 
-$root_dir = realpath($_SERVER['DOCUMENT_ROOT']);
-echo "Root dir " . $root_dir . "<br>";
+// Get the root path of server
+define("ROOT_DIR", realpath($_SERVER['DOCUMENT_ROOT']));
 
-$path = dirname($_SERVER['PHP_SELF'],2);
-echo "Path " .$path . "<br>";
+// Get the path of this file and go up one level
+define("FILE_PATH", dirname($_SERVER['PHP_SELF']), 2);
 
-$real_path = $root_dir . $path;
-echo "Real path " .$real_path . "<br>";
+// Combine ROOT_DIR and FILE_PATH
+$real_path = ROOT_DIR . FILE_PATH;
 
-// $final_path = str_replace("/", "\\", $real_path ) . "\\some_files\\file.txt";
+// Add subfolder and file
 $final_path = $real_path."\\some_files\\file.txt";
-echo "Final path " .$final_path . "<br>";
-
-// $path = $path . "/some_files/file.txt";
-// $real_path = realpath($path);
-
-// echo "real_path" . $real_path . "<br>";
 
 unlink($final_path);

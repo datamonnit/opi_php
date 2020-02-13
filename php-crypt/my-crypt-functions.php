@@ -42,7 +42,7 @@ if (isset($_POST['login'])) {
                         }
                         break;
                     case "crypt-blowfish":
-                        if (crypt($_POST['password'], '$2a$07$anexamplestringforsalt') == $item['password']){
+                        if (crypt($_POST['password'], '$2a$07$anexamplestringforsal') == $item['password']){
                             echo "<h2>Kirjautuminen onnistui</h2>";
                         } else {
                             echo "<h2>Kirjautuminen epäonnistui!</h2>";
