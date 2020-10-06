@@ -1,7 +1,10 @@
 <?php
+
+include_once 'db_settings.php';
+
 $servername = "localhost";
-$username = "root";
-$password = "";
+// $username = "root";
+// $password = "";
 $dbname = "demo_lista";
 
 try {

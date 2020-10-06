@@ -45,4 +45,22 @@
       <kaupunki>Kaukola</kaupunki>
     </osoite>
   </rivi>
+  <rivi>
+    <nimi>Roope</nimi>
+    <puhelin>324234</puhelin>
+    <osoite>
+      <katu>katu 1</katu>
+      <postinumero>50100</postinumero>
+      <kaupunki>Mikkeli</kaupunki>
+    </osoite>
+  </rivi>
+  <rivi>
+    <nimi>Janipetteri</nimi>
+    <puhelin>1243123</puhelin>
+    <osoite>
+      <katu>Tie 10</katu>
+      <postinumero>50100</postinumero>
+      <kaupunki>Mikkeli</kaupunki>
+    </osoite>
+  </rivi>
 </data>

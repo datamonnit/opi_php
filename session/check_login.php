@@ -12,6 +12,10 @@ if (!isset($_POST['nimi'])) {
     die();
 } 
 
+if ($_POST['nimi'] == 'Tuomas') {
+    die('Tuomas ei pääse sisälle!');
+}
+
 // Asetetaan logged_in 'yes' ja nimi-muuttuja ja
 // mennään ok-sivulle
 $_SESSION['logged_in'] = 'yes';
