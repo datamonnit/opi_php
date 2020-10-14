@@ -8,18 +8,25 @@ if (!isset($_POST['nimi']) || !isset($_POST['viesti'])){
     die("Toinen virhe!");
 }
 
+// Putsataan html-koodit
 $nimi = htmlspecialchars($_POST['nimi']);
-$viesti = htmlspecialchars($_POST['viesti']);
 
+// Putsataan html-koodit ja korvataan rivinvaihdot <br>-tageilla
+$viesti = htmlspecialchars($_POST['viesti']);
+$viesti = str_replace(PHP_EOL, "<br>", $viesti);
+
+// Muodostetaan rivi
 $rivi = "$nimi,$viesti," . date("Y-m-d") . PHP_EOL;
 
-echo $rivi;
-
+// Kirjoitetaan rivi pilkkuerotettuun tiedostoon
 $file = fopen("viestit.txt","a");
-echo fwrite($file, $rivi);
+fwrite($file, $rivi);
 fclose($file);
 
+// Kirjoitetaan rivi html-tiedostoon
 $rivi = "<div class=\"viesti\">$nimi<br>$viesti</div>";
 $file = fopen("viestit.html","a");
-echo fwrite($file, $rivi);
+fwrite($file, $rivi);
 fclose($file);
+
+header('Location: showMessages.php');
