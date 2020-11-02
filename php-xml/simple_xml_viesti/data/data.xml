@@ -28,4 +28,10 @@
     <teksti>viesti</teksti>
     <aika>6.10.2020 9:29:02</aika>
   </viesti>
+  <viesti piilota="false">
+    <lähettäjä>Jaakko</lähettäjä>
+    <aihe>Superi</aihe>
+    <teksti>Hip hip hurraa</teksti>
+    <aika>2.11.2020 10:19:14</aika>
+  </viesti>
 </data>

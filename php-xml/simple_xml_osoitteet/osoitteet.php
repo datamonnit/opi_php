@@ -11,13 +11,16 @@
         <a href="lomake.html">Lisää uusi</a>
     </p>
     <?php $xml = simplexml_load_file('data.xml'); ?>
-    <?php foreach ($xml->rivi as $osoite): ?>
+    <?php 
+    $i = 0;
+    foreach ($xml->rivi as $osoite): ?>
         <div>
             <ul>
                 <li><?php echo $osoite->nimi; ?></li>
                 <li><?php echo $osoite->puhelin; ?></li>
                 <li><?php echo $osoite->osoite->katu; ?></li>
                 <li><?php echo $osoite->osoite->postinumero . " " . $osoite->kaupunki; ?></li>
+                <li><a href="delete.php?i=<?php echo $i++; ?>">Poista</a></li>
             </ul>
         </div>
     <?php endforeach; ?>
