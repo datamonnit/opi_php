@@ -1,0 +1,7 @@
+POST http://localhost/opi_php/send-mail/send_mail.php
+
+{
+    "to" : "tuomas.puro@example.com",
+    "subject" : "Tässä aihe",
+    "message" : "Moikka"
+}
